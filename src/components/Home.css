@@ -1,0 +1,12 @@
+.home{position:relative;min-height:100vh;display:grid;place-items:center;text-align:center;background-size:cover;background-position:center;padding:120px 20px 80px}
+.home-shade{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(8,8,9,.35),rgba(8,8,9,.85) 80%)}
+.home-body{position:relative;max-width:900px}
+.dealer{color:var(--hero-mute);letter-spacing:.3em;font-size:14px;text-transform:uppercase;margin-bottom:20px}
+.home h1{font:900 clamp(56px,10vw,128px)/.92 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:-.01em}
+.home h1 em{display:block;font-style:normal;color:var(--red)}
+.lead{max-width:520px;margin:28px auto 36px;font-size:19px;line-height:1.5}
+.home-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.home{align-content:center}
+.perks{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);list-style:none;padding:0;background:rgba(14,14,16,.85);border-top:2px solid var(--red)}
+.perks li{padding:16px;text-align:center;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+@media(max-width:700px){.perks{grid-template-columns:1fr 1fr}}

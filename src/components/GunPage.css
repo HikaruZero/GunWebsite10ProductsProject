@@ -1,0 +1,26 @@
+.gp-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;background-size:cover;background-position:center;color:var(--hero-ink)}
+.gp-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,9,.9),rgba(8,8,9,.4) 60%,rgba(8,8,9,.15)),linear-gradient(0deg,rgba(8,8,9,.85),transparent 50%)}
+.gp-top{position:relative;padding:130px clamp(20px,5vw,80px) 48px;max-width:900px}
+.back{display:inline-block;color:var(--hero-mute);text-decoration:none;margin-bottom:18px}
+.back:hover{color:#fff}
+.gp-top .pill{display:block;width:fit-content;margin-bottom:12px}
+.gp-top h1{font:900 clamp(48px,8vw,112px)/.92 'Barlow Condensed',sans-serif;text-transform:uppercase}
+.about{list-style:none;padding:0 0 0 18px;border-left:3px solid var(--red);margin:24px 0;display:grid;gap:6px;font-size:18px}
+.buy{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.buy strong{font:800 44px 'Barlow Condensed',sans-serif}
+.gp-sec{padding:70px clamp(20px,5vw,80px);background:var(--bg)}
+.gp-sec.alt{background:var(--surface);border-block:1px solid var(--line)}
+.gp-sec h2{font:900 clamp(36px,5vw,60px)/1 'Barlow Condensed',sans-serif;text-transform:uppercase;margin-bottom:8px}
+.best{color:var(--red);font-weight:600;margin-bottom:28px}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:24px}
+.spec h3{font:700 24px 'Barlow Condensed',sans-serif;color:var(--red);margin-bottom:4px}
+.spec-note{color:var(--mute);font-size:14px;margin-bottom:8px}
+.spec dl div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+.spec dt{color:var(--mute)}
+.spec dd{text-align:right;font-weight:600}
+.gp-sec .hist{list-style:none;padding:0 0 0 18px;border-left:3px solid var(--red);display:grid;gap:10px;font-size:18px;line-height:1.4;max-width:760px;margin-top:20px}
+.gp-nav{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:28px clamp(20px,5vw,80px);background:var(--bg);border-top:1px solid var(--line)}
+.gp-nav a{color:var(--ink);text-decoration:none;font-weight:600}
+.gp-nav a:hover{color:var(--red)}
+.gp-missing{min-height:70vh;display:grid;place-content:center;gap:20px;text-align:center;padding:120px 20px}
+@media(max-width:860px){.spec-grid{grid-template-columns:1fr}}

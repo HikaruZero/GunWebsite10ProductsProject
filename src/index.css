@@ -1,0 +1,25 @@
+:root{--bg:#0e0e10;--surface:#16161a;--field:#1a1a1d;--ink:#f4f4f2;--mute:#a8a8a6;--red:#e32626;--line:rgba(255,255,255,.14);--line-strong:rgba(255,255,255,.3);--glass:rgba(14,14,16,.85);--ok:#6fcf7f;--hero-ink:#f4f4f2;--hero-mute:#b4b4b2;color-scheme:dark}
+:root[data-theme='light']{--bg:#f3f2ef;--surface:#ffffff;--field:#ffffff;--ink:#16161a;--mute:#5c5c61;--red:#d11f1f;--line:rgba(0,0,0,.14);--line-strong:rgba(0,0,0,.32);--glass:rgba(255,255,255,.88);--ok:#1f7a35;--hero-ink:#f4f4f2;--hero-mute:#b4b4b2;color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);transition:background-color .3s,color .3s;font-family:Barlow,system-ui,sans-serif}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.btn{display:inline-block;background:var(--red);border:2px solid var(--red);padding:14px 28px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;text-decoration:none}
+.btn:hover{background:#ff3b3b;border-color:#ff3b3b}
+.btn.ghost{background:transparent;border-color:var(--ink)}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.heart{color:#f4f4f2;background:rgba(14,14,16,.75);border:1px solid rgba(255,255,255,.3);width:40px;height:40px;font-size:20px;line-height:1;display:grid;place-items:center}
+.heart.on{color:var(--red);border-color:var(--red)}
+.pill{color:#fff;display:inline-block;background:var(--red);padding:3px 10px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.pill.dark{background:rgba(255,255,255,.14)}
+.low{color:var(--red);font-weight:600}
+.home,.shop{color:var(--hero-ink)}
+.home .btn.ghost{color:var(--hero-ink);border-color:var(--hero-ink)}
+.home .btn.ghost:hover{background:var(--hero-ink);color:#000}
+.nav .brand{color:var(--ink)}
+
+.shop .btn.ghost,.gp-hero .btn.ghost{color:var(--hero-ink);border-color:var(--hero-ink)}
+.shop .btn.ghost:hover,.gp-hero .btn.ghost:hover{background:var(--hero-ink);color:#000}

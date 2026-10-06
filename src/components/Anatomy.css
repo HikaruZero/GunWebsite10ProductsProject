@@ -1,0 +1,16 @@
+.anat{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:start}
+.fig{position:relative;border:1px solid var(--line);background:var(--surface)}
+.fig img{width:100%;display:block}
+.dot{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:rgba(14,14,16,.85);border:2px solid #f4f4f2;color:#f4f4f2;font-weight:700;font-size:14px;display:grid;place-items:center;padding:0;transition:transform .2s,background .2s}
+.dot.on{background:var(--red);border-color:#fff;transform:scale(1.25);z-index:2}
+.dot.on::after{content:'';position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--red);animation:ping 1.4s ease-out infinite}
+.parts{list-style:none;padding:0;display:grid;gap:8px}
+.parts button{width:100%;display:flex;gap:14px;align-items:flex-start;text-align:left;background:var(--surface);border:1px solid var(--line);border-left:3px solid transparent;padding:12px 14px}
+.parts li.on button{border-left-color:var(--red)}
+.parts b{flex:none;width:26px;height:26px;border-radius:50%;background:var(--field);border:1px solid var(--line-strong);display:grid;place-items:center;font-size:13px}
+.parts li.on b{background:var(--red);border-color:var(--red);color:#fff}
+.parts span{display:grid;gap:2px}
+.parts em{font-style:normal;color:var(--mute);font-size:14px;line-height:1.35}
+@keyframes ping{from{opacity:.9;transform:scale(.8)}to{opacity:0;transform:scale(1.5)}}
+@media(max-width:860px){.anat{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.dot.on::after{animation:none}}

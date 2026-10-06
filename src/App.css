@@ -1,0 +1,38 @@
+.hero{position:relative;min-height:100%;display:flex;flex-direction:column;overflow:hidden;background:#000}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.06);transition:opacity 1.2s ease,transform 7s linear}
+.bg.on{opacity:1;transform:scale(1)}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,9,.88) 0%,rgba(8,8,9,.45) 45%,rgba(8,8,9,.1) 100%),linear-gradient(0deg,rgba(8,8,9,.9),transparent 30%)}
+.nav,.stage,.picker{position:relative;z-index:1}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:20px clamp(20px,5vw,80px);background:rgba(14,14,16,.82);backdrop-filter:blur(6px)}
+.brand{font:900 28px 'Barlow Condensed',sans-serif;color:var(--ink);text-decoration:none;letter-spacing:.02em}
+.brand span{color:var(--red);margin-left:6px}
+.nav nav{display:flex;gap:28px;align-items:center}
+.nav a{color:var(--ink);text-decoration:none;font-weight:500}
+.nav a:hover{color:var(--red)}
+.cart{background:none;border:1px solid var(--ink);padding:8px 16px}
+.stage{flex:1;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:40px clamp(20px,5vw,80px)}
+.intro{animation:fade .9s ease both}
+.dealer{color:var(--mute);letter-spacing:.2em;font-size:13px;text-transform:uppercase;margin-bottom:12px}
+h1{font:900 clamp(56px,9vw,140px)/.9 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:-.01em}
+h2{font:700 22px 'Barlow Condensed',sans-serif;color:var(--red);margin:32px 0 10px}
+.hist{list-style:none;padding:0;border-left:3px solid var(--red);padding-left:18px;display:grid;gap:8px;font-size:18px}
+.panel{justify-self:end;width:min(100%,440px);background:rgba(14,14,16,.82);backdrop-filter:blur(8px);border-top:3px solid var(--red);padding:20px;animation:slide .8s cubic-bezier(.2,.8,.2,1) both}
+.panel img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin-bottom:16px}
+dl div{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+dt{color:var(--mute)}dd{text-align:right;font-weight:600}
+.buyrow{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+.buyrow strong{font:800 34px 'Barlow Condensed',sans-serif}
+.btn{background:var(--red);border:0;padding:14px 28px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.btn:hover{background:#ff3b3b}
+.picker{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:0 clamp(20px,5vw,80px) 28px}
+.picker button{position:relative;display:flex;align-items:center;gap:12px;background:rgba(14,14,16,.7);border:1px solid rgba(255,255,255,.15);padding:8px;text-align:left;overflow:hidden}
+.picker button.on{border-color:var(--red)}
+.picker img{width:64px;height:40px;object-fit:cover}
+.picker span{font-weight:600}
+.bar{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--red);transform-origin:left;animation:fill linear forwards}
+.toast{position:fixed;z-index:5;left:50%;bottom:110px;transform:translateX(-50%);background:var(--red);padding:12px 22px;font-weight:600}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes slide{from{opacity:0;transform:translateX(80px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media(max-width:860px){.stage{grid-template-columns:1fr}.panel{justify-self:stretch;width:100%}.picker{grid-template-columns:1fr 1fr}.nav nav a{display:none}}
+@media(prefers-reduced-motion:reduce){.bg,.panel,.intro{transition:none;animation:none}}

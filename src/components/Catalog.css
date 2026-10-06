@@ -1,0 +1,13 @@
+.catalog{background:var(--bg);padding:80px clamp(20px,5vw,80px) 60px;scroll-margin-top:60px}
+.catalog .head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:24px}
+.catalog h2{font:900 clamp(40px,6vw,72px)/1 'Barlow Condensed',sans-serif;text-transform:uppercase}
+.catalog .head p{color:var(--mute)}
+.tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:28px}
+.tools input,.tools select{background:var(--field);border:1px solid var(--line-strong);color:var(--ink);padding:10px 14px;font:inherit;font-size:16px}
+.tools input{flex:1 1 220px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips button{background:none;border:1px solid var(--line-strong);padding:9px 16px;font-weight:600}
+.chips button.on{background:var(--red);border-color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.none{color:var(--mute);padding:40px 0}
+.note{margin-top:36px;color:var(--mute);font-size:14px}

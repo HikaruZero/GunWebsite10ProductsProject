@@ -1,0 +1,15 @@
+.shop{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden;scroll-margin-top:0}
+.shop-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.06);transition:opacity 1.2s ease,transform 7s linear}
+.shop-bg.on{opacity:1;transform:scale(1)}
+.shop-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,9,.88) 0%,rgba(8,8,9,.45) 45%,rgba(8,8,9,.1) 100%),linear-gradient(0deg,rgba(8,8,9,.9),transparent 30%)}
+.shop-stage{position:relative;flex:1;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:110px clamp(20px,5vw,80px) 30px}
+.intro{animation:fade .9s ease both}
+.intro .pill{margin-bottom:14px}.intro h2{overflow-wrap:anywhere;font:900 clamp(44px,7.5vw,112px)/.9 'Barlow Condensed',sans-serif;text-transform:uppercase}
+.intro h3{font:700 22px 'Barlow Condensed',sans-serif;color:var(--red);margin:32px 0 10px}
+.intro ul{list-style:none;padding:0 0 0 18px;border-left:3px solid var(--red);display:grid;gap:8px;font-size:17px;line-height:1.35;max-width:640px}
+.panel-wrap{justify-self:end;width:min(100%,440px);animation:slide .8s cubic-bezier(.2,.8,.2,1) both}
+@keyframes slide{from{opacity:0;transform:translateX(80px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media(max-width:860px){.shop-stage{grid-template-columns:1fr}.panel-wrap{justify-self:stretch;width:100%}}
+@media(prefers-reduced-motion:reduce){.shop-bg,.panel-wrap,.intro{transition:none;animation:none}}
+.intro .btn{margin-top:26px}

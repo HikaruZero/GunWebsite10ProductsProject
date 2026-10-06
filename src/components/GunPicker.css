@@ -1,0 +1,7 @@
+.picker{position:relative;display:flex;gap:12px;padding:0 clamp(20px,5vw,80px) 28px;overflow-x:auto;scrollbar-width:thin}
+.picker button{position:relative;flex:0 0 210px;display:flex;align-items:center;gap:12px;background:rgba(14,14,16,.7);border:1px solid rgba(255,255,255,.15);padding:8px;text-align:left;overflow:hidden}
+.picker button.on{border-color:var(--red)}
+.picker img{width:64px;height:40px;object-fit:cover}
+.picker span{font-weight:600}
+.bar{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--red);transform-origin:left;animation:fill linear forwards}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}

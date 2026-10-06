@@ -1,0 +1,2 @@
+.contact{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:32px clamp(20px,5vw,80px);background:var(--bg);color:var(--mute)}
+.contact strong{color:var(--ink);font:800 22px 'Barlow Condensed',sans-serif}
